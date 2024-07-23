@@ -1,9 +1,98 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-    <title>ImmutableVariable</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <script>
+        const name = "ImmutableVariable"
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('title')
+            title.textContent = name
+
+            const username = document.getElementById('my_username')
+            username.textContent = name
+        })
+    </script>
+    <title>Immutable Variable</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Placeholder Text Here</h1>
+    <main class="container">
+        <nav class="nav_main">
+            <img src="https://avatars.githubusercontent.com/u/117414402?v=4" id="round_image" alt="Profile Picture" width="100" height="100">
+            <ul>
+                <li>
+                    <a class="noColor noUnderline" href="https://github.com/ImmutableVariable"><h2 id="my_username">ImmutableVariable</h2></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h4><a href="#about">About</a></h4>
+                </li>
+                <li>
+                    <h4><a href="#projects">Projects</a></h4>
+                </li>
+            </ul>
+        </nav>
+
+        <article>
+            <header id="about">
+                <h1>🧑‍💻 About Me:</h1>
+            </header>
+            <p>Hi, I'm ImmutableVariable, a self-taught programmer who loves to learn new things and create new projects. I'm currently learning Rust and Haskell, and have a few project ideas i'm interested in.</p>
+            <h3>🖥️ My Setup:</h3>
+            <ul>
+                <li>🖥️ I use Windows 11 and Linux on my custom-built PC and laptop.</li>
+                <li>💻 My preferred code editor is VSCode currently, but I also know how to use vim.</li>
+            </ul>
+            <h3>🧠 My Skills:</h3>
+            <ul>
+                <li>💻 Programming: Learning Rust, skilled in JavaScript, and know some Python.</li>
+                <li>🌐 Web Development: Backend focused, with some React experience/frontend experience.</li>
+                <li>📊 Database: I know MongoDB and SQL (PostgreSQL).</li>
+                <li>🔒 Security: I know the basics of security/cybersecurity and how to secure my applications.</li>
+            </ul>
+            <h3>🎮 My Hobbies:</h3>
+            <ul>
+                <li>💻 Programming: I enjoy learning and creating new things!</li>
+                <li>🚁 FPV (First Person View) Drones: my main drones is a custom built 5inch freestyle</li>
+                <li>🎮 Video Games: I play with friends and love single-player games.</li>
+                <li>🎵 Music: I listen while programming and gaming.</li>
+            </ul>
+            <h3>My Goals 🎯</h3>
+            <ul>
+                <li>📚 Learn more rust and haskell and write better code using it </li>
+                <li>🔒 Learn more about security and how to secure my applications.</li>
+                <li>🔐 Learn about cryptographic algorithms and be able to understand more complex algorithms/topics</li>
+            </ul>
+            <h3>My main technologies Languages/Technologies 📚</h3>
+            <ul>
+                <li><strong>Rust</strong> - probably my favorite language! </li>
+                <li><strong>JavaScript</strong> - web devs...
+                <li><strong>Python</strong> - I use this for some scripts and stuff </li>
+                <li><strong>PostgreSQL</strong> Probably my main database/SQL language</li>
+                <li><strong>HTML/CSS/React</strong> - I know these, atleast the </li>
+            </ul>
+        </article>
+        <article>
+            <header id="projects">
+                <h1>📦 Projects:</h1>
+            </header>
+            <article>
+                <header>
+                    <h3><a href="/coding-challenges.html" class="noUnderline">Coding Challenges</a></h3>
+                </header>
+                <h4>📝 Description:</h4>
+                <p>A collection of programming challenges, and accompanying solutions I have created in multiple langauges. All challenges are language agnostic which means they can be solved using any langauge!</p>
+                <h4>🖥️ Language</h4>
+                <p>The text is created in markdown with mdbook; however it has code written in multiple languages and mdbook has built in support for running rust code</p>
+        </article>
+    </main>
 </body>
+
 </html>

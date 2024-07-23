@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script>
+        const converter = new showdown.Converter()
+        const name = "ImmutableVariable"
+        const github_repository_path = "ImmutableVariable/Coding-Challenges"
+        const readme = fetch("https://raw.githubusercontent.com/"+ github_repository_path + "/main/README.md").then(response => response.text())
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('title')
+            title.textContent = name
+
+            const username = document.getElementById('my_username')
+            username.textContent = name
+
+            const html_repo_link = document.getElementById('html_repo_link')
+            html_repo_link.href = "https://github.com/" + github_repository_path
+
+            const article = document.getElementById('content')
+            readme.then(text => {
+                article.innerHTML = converter.makeHtml(text)
+            })
+        })
+
+    
+    </script>
+    <title>Immutable Variable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <nav>
+            <img src="https://avatars.githubusercontent.com/u/117414402?v=4" id="round_image" alt="Profile Picture" width="100" height="100">
+            <ul>
+                <li>
+                    <a class="noColor noUnderline" href="https://github.com/ImmutableVariable"><h2 id="my_username">ImmutableVariable</h2></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h4><a href="/#About">About</a></h4>
+                </li>
+                <li>
+                    <h4><a href="/#projects">Projects</a></h4>
+                </li>
+            </ul>
+        </nav>
+        <article>
+            <header>
+                <h3>🔍 <a href="" id="html_repo_link"> View Repository Here</a></h3>
+            </header>   
+            <div id="content">
+                <p>Loading...</p>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
