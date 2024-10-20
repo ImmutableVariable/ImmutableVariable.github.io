@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/117414402?v=4">
     <style>
         html, body {
@@ -88,22 +87,6 @@
         }
 
     </style>
-
-    <script>
-        const converter = new showdown.Converter()
-        const github_repository_path = "ImmutableVariable/sha"
-        const readme = fetch("https://raw.githubusercontent.com/"+ github_repository_path + "/main/README.md").then(response => response.text())
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const html_repo_link = document.getElementById('html_repo_link')
-            html_repo_link.href = "https://github.com/" + github_repository_path
-
-            const article = document.getElementById('content')
-            readme.then(text => {
-                article.innerHTML = converter.makeHtml(text)
-            })
-        })
-    </script>
 </head>
 <body>
     <div class="main">
@@ -126,13 +109,27 @@
             </ul>
         </nav>
         <div class="content">
+            <h1>📦 Projects</h1>
             <article>
-                <header>
-                    <h3>🔍 <a href="" id="html_repo_link"> View Repository Here</a></h3>
-                </header>   
-                <div id="content">
-                    <p>Loading...</p>
-                </div>
+                <h3><a href="/challenges" class="noUnderline">Coding Challenges</a></h3>
+                <h4>📝 Description:</h4>
+                <p>A collection of programming challenges, and accompanying solutions I have created in multiple langauges. All challenges are language agnostic which means they can be solved using any langauge!</p>
+                <h4>🖥️ Technologies</h4>
+                <p>The text is created in markdown with mdbook; however it has code written in multiple languages and mdbook has built in support for running rust code</p>
+            </article>
+            <article>
+                <h3><a href="/sha.html" class="noUnderline">SHA</a></h3>
+                <h4>📝 Description:</h4>
+                <p>A simple implementation of the SHA-(1/256/512) hashing algorithms in Rust. I just made this to learn about some hashing algorithms but it felt useful to others so I am posting it here!</p>
+                <h4>🖥️ Technologies</h4>
+                <p>The project is written in rust without any dependencies. </p>    
+            </article>
+            <article>
+                <h3><a href="/whaledev.html" class="noUnderline">WhaleDev</a></h3>
+                <h4>📝 Description:</h4>
+                <p>A pretty simple discord bot! You can always build off it too!</p>
+                <h4>🖥️ Technologies</h4>
+                <p>The project is written in rust using the <a href="https://github.com/serenity-rs/serenity" class="noUnderline">serenity</a> library</p>
             </article>
         </div>  
         <footer class="footer">

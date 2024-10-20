@@ -1,53 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark" />
-    <link href="https://github.com/ImmutableVariable" rel="me">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmutableVariable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/117414402?v=4">
-    <script>
-        const name = "ImmutableVariable"
-        document.addEventListener('DOMContentLoaded', function() {
-            const title = document.querySelector('title')
-            title.textContent = name
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
 
-            const username = document.getElementById('my_username')
-            username.textContent = name
-        })
-    </script>
-    <title>Immutable Variable</title>
-    <link rel="stylesheet" href="style.css">
+        .main {
+            font-family: 'JetBrains Mono', monospace;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #round_image {
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+
+        .nav-links a {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 0 10px; 
+            text-decoration: none; 
+            color: black;
+        }
+
+        .name-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .footer {
+            margin-top: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .navbar {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .logo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .nav-links {
+                padding-left: 15px;
+                padding-right: 15px;
+
+            }
+            .nav-links a {
+                margin: 10px 0;
+                
+            }
+        }
+
+    </style>
 </head>
-
 <body>
-    <main class="container">
-        <nav class="nav_main">
-            <a class="noColor noUnderline" href="/">
-                <img src="https://avatars.githubusercontent.com/u/117414402?v=4" id="round_image" alt="Profile Picture" width="100" height="100">
-            </a>
-            <ul>
+    <div class="main">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="https://avatars.githubusercontent.com/u/117414402?v=4" id="round_image" alt="Profile Picture" width="100" height="100">
+                </a>
+            </div>
+            <ul class="nav-links">
                 <li>
-                    <a class="noColor noUnderline" href="https://github.com/ImmutableVariable"><h2 id="my_username">ImmutableVariable</h2></a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h4><a href="#about">About</a></h4>
+                    <h4><a href="/">About</a></h4>
                 </li>
                 <li>
-                    <h4><a href="#projects">Projects</a></h4>
+                    <h4><a href="/projects.html">Projects</a></h4>
+                </li>
+                <li>
+                    <h2 ></h2><a class="noColor noUnderline" href="https://github.com/ImmutableVariable">Github</a></h2>
                 </li>
             </ul>
         </nav>
-
-        <article>
-            <header id="about">
-                <h1>🧑‍💻 About Me:</h1>
-            </header>
-            <p>Hi, I'm ImmutableVariable, a self-taught programmer who loves to learn new things and create new projects. I'm currently learning Rust and Haskell, and have a few project ideas i'm interested in.</p>
+        <div class = "content">
+            <h1>🧑‍💻 About Me</h1>
+            <ul>
+                <li>📚 I'm a self-taught programmer who loves to learn new things and create new projects.</li>
+                <li>🔒 I'm currently learning Rust and Zig, and have a few project ideas i'm interested in.</li>
+            </ul>
             <h3>🛠️ My Setup:</h3>
             <ul>
                 <li>🖥️ I use Windows 11 and Linux on my custom-built PC and 💻 on my laptop.</li>
@@ -69,7 +134,7 @@
             </ul>
             <h3>My Goals 🎯</h3>
             <ul>
-                <li>📚 Learn more rust and haskell and write better code using it </li>
+                <li>📚 Learn more rust and zig and write better code using it </li>
                 <li>🔒 Learn more about security and how to secure my applications.</li>
                 <li>🔐 Learn about cryptographic algorithms and be able to understand more complex algorithms/topics</li>
             </ul>
@@ -82,40 +147,10 @@
                 <li><a href="https://www.postgresql.org/" class="noUnderline"><strong>PostgreSQL</strong></a> Probably my main database/SQL language</li>
                 <li><a href="https://www.mongodb.com/" class="noUnderline"><strong>MongoDB</strong></a> - Although I use SQL more, I also know MongoDB</li>
             </ul>
-        </article>
-        <article>
-            <header id="projects">
-                <h1>📦 Projects:</h1>
-            </header>
-            <article>
-                <header>
-                    <h3><a href="/challenges" class="noUnderline">Coding Challenges</a></h3>
-                </header>
-                <h4>📝 Description:</h4>
-                <p>A collection of programming challenges, and accompanying solutions I have created in multiple langauges. All challenges are language agnostic which means they can be solved using any langauge!</p>
-                <h4>🖥️ Technologies</h4>
-                <p>The text is created in markdown with mdbook; however it has code written in multiple languages and mdbook has built in support for running rust code</p>
-            </article>
-            <article>
-                <header>
-                    <h3><a href="/sha.html" class="noUnderline">SHA</a></h3>
-                </header>
-                <h4>📝 Description:</h4>
-                <p>A simple implementation of the SHA-(1/256/512) hashing algorithms in Rust. I just made this to learn about some hashing algorithms but it felt useful to others so I am posting it here!</p>
-                <h4>🖥️ Technologies</h4>
-                <p>The project is written in rust without any dependencies. </p>    
-            </article>
-            <article>
-                <header>
-                    <h3><a href="/whaledev.html" class="noUnderline">WhaleDev</a></h3>
-                </header>
-                <h4>📝 Description:</h4>
-                <p>A pretty simple discord bot! You can always build off it too!</p>
-                <h4>🖥️ Technologies</h4>
-                <p>The project is written in rust using the <a href="https://github.com/serenity-rs/serenity" class="noUnderline">serenity</a> library</p>
-            </article>
-        </article>
-    </main>
+        </div>  
+        <footer class="footer">
+            <p>&copy; 2024 All rights reserved</p>
+        </footer>
+    </div>
 </body>
-
 </html>
